@@ -1,6 +1,13 @@
 # Express.js auth with JWT
 
-> I want to create personal notes using GitHub and utilize different branches to record various stages or new features. Additionally, I'd like to practice version control operations with Git simultaneously.
+v2-hashedPassword
+> Never store the password with unhashed!
+
+## Tech stack now:
+- express.js
+- jsonwebtoken
+- bcrypt 🆕
+
 
 ## 🚀 How to start
 ### Init dependencies
