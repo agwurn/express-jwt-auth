@@ -13,7 +13,7 @@ v3-authRouter
 ## 🚀 How to start
 ### Init dependencies
 ``` 
-npm init
+npm install
 ```
 ### Run server
 ``` 
