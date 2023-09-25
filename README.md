@@ -12,7 +12,7 @@ v2-hashedPassword
 ## 🚀 How to start
 ### Init dependencies
 ``` 
-npm init
+npm install
 ```
 ### Run server
 ``` 
