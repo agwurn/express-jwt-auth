@@ -1,13 +1,8 @@
-const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const users = require("../utils/users");
+const users = require("../models/users");
 
-const authRouter = express.Router();
-
-const secretKey = "yourSecretKey";
-
-authRouter.post("/register", (req, res) => {
+const register = (req, res) => {
   const { username, password } = req.body;
 
   if (users.find((user) => user.username === username)) {
@@ -30,9 +25,9 @@ authRouter.post("/register", (req, res) => {
     console.log(users);
     res.status(201).json({ message: "註冊成功" });
   });
-});
+};
 
-authRouter.post("/login", (req, res) => {
+const login = (req, res) => {
   const { username, password } = req.body;
 
   const user = users.find((user) => user.username === username);
@@ -48,13 +43,13 @@ authRouter.post("/login", (req, res) => {
 
     const token = jwt.sign(
       { userId: user.id, username: user.username },
-      secretKey,
+      process.env.SECRET_KEY,
       { expiresIn: "1h" }
     );
 
     console.log(`[使用者登入] ${username}`);
     res.json({ message: "登入成功", token });
   });
-});
+}
 
-module.exports = authRouter;
+module.exports = { register, login };

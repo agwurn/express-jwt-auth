@@ -1,5 +1,6 @@
 const express = require("express");
-const authRouter = require("./router/authRouter");
+const authRouter = require("./routes/authRouter");
+require("dotenv").config();
 
 const app = express();
 

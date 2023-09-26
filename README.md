@@ -1,13 +1,15 @@
 # Express.js auth with JWT
 
-v3-authRouter
-> better code & folder structure.
+v4-authController
+> Implement MVC architecture by separating router and controller for better code & folder structure.
+> Protect the secretkey by implementing dotenv.
 
 ## Tech stack now:
 - express.js 
-    - Router 🆕
+    - MVC architecture 🆕
 - jsonwebtoken
-- bcrypt 
+- bcrypt
+- dotenv 🆕
 
 
 ## 🚀 How to start
@@ -20,20 +22,8 @@ npm init
 nodemon app.js
 ```
 ### Trigger the API
-use [postman](https://web.postman.co/workspace/My-Workspace~86b01eb1-7792-41e9-889c-4bec5a737661/request/25131724-4980e75d-5617-4017-a516-a7d7371bb142)
+use my postman workspace 🔗 [forMyGithub](https://www.postman.com/cryosat-geologist-48085018/workspace/formygithub/collection/25131724-8b7cb279-0cf9-4394-9640-054c07bcd1e5?action=share&creator=25131724)
 
-(post)
-http://localhost:3000/auth/submit 🆕
-``` JavaScript
-// req.body - raw - json
-{
-    "username": "admin",
-    "password": "admin"
-}
-```
-
-(post)
-http://localhost:3000/auth/login 🆕
 ``` JavaScript
 // req.body - raw - json
 {
